@@ -14,9 +14,10 @@ def insertSort(arr):
     return arr
 
 
-def exe():
+def exe(arrString = ""):
     print("Insertion Sort")
-    arrString = input("Enter array of numbers to sort separated by space: ")
+    if not len(arrString):
+        arrString = input("Enter array of numbers to sort separated by space: ")
     arrSplit = arrString.split(" ")
     # Convertion of String type inputs into int
     for i in range(0, len(arrSplit)):
@@ -26,5 +27,14 @@ def exe():
     sortedArr = insertSort(arrSplit)
     print("Sorted Array: ", sortedArr)
 
+def fileExe(fname):
+    f = open(fname, 'r')
+    arrString = f.read()
+    exe(arrString[:-1])
+    f.close()
 
-exe()
+if __name__ == '__main__':
+    # File Execution
+    fileExe("small_10.txt")
+    # Manual Execution
+    exe()
