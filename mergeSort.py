@@ -23,6 +23,7 @@ def mergeSort(arr, show=False):
             print("returnedArrMerged=", returnedArr)
     if show:
         print("Sorting happened")
+    # this part of the code is wrong as it uses insertation sort instead of merge sort       
     arr = insertSort(returnedArr)
     if show:
         print("returning back, arr=", arr)
