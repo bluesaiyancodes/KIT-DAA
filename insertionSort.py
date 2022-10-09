@@ -17,7 +17,7 @@ def insertSort(arr):
 def exe(arrString = ""):
     print("Insertion Sort")
     if not len(arrString):
-        arrString = input("Enter array of numbers to sort separated by space: ")
+        arrString = input("Enter array of numbers with separated by space for sorting: ")
     arrSplit = arrString.split(" ")
     # Convertion of String type inputs into int
     for i in range(0, len(arrSplit)):
